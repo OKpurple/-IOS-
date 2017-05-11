@@ -1,0 +1,29 @@
+
+//회원가입
+제이슨형태로 
+  app.post('172.31.27.238/addUser')
+
+
+//동행글 올리기
+제이슨형태  
+  app.post('172.31.27.238/addBull')
+
+
+  //자기가 올린 동행정보 보기
+자기가 쓴 동행정보
+  app.get('172.31.27.238/myUser/:user_id')
+[{"user_id":"aaaaa","user_password":"1234567890","user_name":"강병철","user_sex":"male","user_age":"26"}]
+
+  //위치에 따른 동행 정보넘겨주기
+   위도경도 넘겨주시면 그주변지역 동행글나옴
+제이슨 :[{"num":1,"user_id":"aaaaa","title":"우리지금만나","content":"당장만나","latitude":33.5034916,"longitude":126.5120341,"date":"2017:05:17:12:12"}]
+    app.get('172.31.27.238/bullUser/:lat&:lon)
+
+
+//비번바꾸기 아직안함
+    app.put('172.31.27.238/updateUser/:username', function(req, res){
+
+
+//board_num으로 자신 게시물 삭제
+    자기 글 삭제
+    app.delete('172.31.27.238/deleteBull/:board_num)
