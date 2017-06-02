@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15273E41FA3714D8078B9D95 /* Pods_Jeju.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9991BD58030D4F6D1EA30A7C /* Pods_Jeju.framework */; };
 		D74473501EB9E5A2007B1817 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D744734F1EB9E5A2007B1817 /* GoogleMapsBase.framework */; };
 		D74473551EB9E5DA007B1817 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74473531EB9E5DA007B1817 /* GoogleMaps.framework */; };
 		D74473561EB9E5DA007B1817 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74473541EB9E5DA007B1817 /* GoogleMapsCore.framework */; };
@@ -24,6 +25,7 @@
 		D744736F1EB9E6CB007B1817 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D744736E1EB9E6CB007B1817 /* QuartzCore.framework */; };
 		D74473711EB9E70F007B1817 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74473701EB9E70F007B1817 /* SystemConfiguration.framework */; };
 		D74473731EB9E719007B1817 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74473721EB9E719007B1817 /* UIKit.framework */; };
+		D7BFF4901EBB4728008F943C /* detailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BFF48F1EBB4728008F943C /* detailVC.swift */; };
 		D7FC00881EB9E4F000945E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC00871EB9E4F000945E84 /* AppDelegate.swift */; };
 		D7FC008A1EB9E4F000945E84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FC00891EB9E4F000945E84 /* ViewController.swift */; };
 		D7FC008D1EB9E4F000945E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7FC008B1EB9E4F000945E84 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		284A2ADAB1978F7AB2DD84ED /* Pods-Jeju.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jeju.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jeju/Pods-Jeju.release.xcconfig"; sourceTree = "<group>"; };
+		9991BD58030D4F6D1EA30A7C /* Pods_Jeju.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jeju.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D744734F1EB9E5A2007B1817 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
 		D74473531EB9E5DA007B1817 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		D74473541EB9E5DA007B1817 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 		D744736E1EB9E6CB007B1817 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D74473701EB9E70F007B1817 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D74473721EB9E719007B1817 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D7BFF48F1EBB4728008F943C /* detailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailVC.swift; sourceTree = "<group>"; };
 		D7FC00841EB9E4F000945E84 /* Jeju.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jeju.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FC00871EB9E4F000945E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7FC00891EB9E4F000945E84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 		D7FC008E1EB9E4F000945E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7FC00911EB9E4F000945E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7FC00931EB9E4F000945E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA8DD16678EA30B4E21E74BE /* Pods-Jeju.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jeju.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jeju/Pods-Jeju.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 				D74473551EB9E5DA007B1817 /* GoogleMaps.framework in Frameworks */,
 				D74473501EB9E5A2007B1817 /* GoogleMapsBase.framework in Frameworks */,
 				D74473561EB9E5DA007B1817 /* GoogleMapsCore.framework in Frameworks */,
+				15273E41FA3714D8078B9D95 /* Pods_Jeju.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +108,7 @@
 				D744735E1EB9E67E007B1817 /* CoreGraphics.framework */,
 				D744735C1EB9E673007B1817 /* CoreData.framework */,
 				D744735A1EB9E668007B1817 /* Accelerate.framework */,
+				9991BD58030D4F6D1EA30A7C /* Pods_Jeju.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 				D74473541EB9E5DA007B1817 /* GoogleMapsCore.framework */,
 				D744734F1EB9E5A2007B1817 /* GoogleMapsBase.framework */,
 				D74473591EB9E668007B1817 /* Frameworks */,
+				F5CC0BC522E2918AA9671DD4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,8 +144,18 @@
 				D7FC008E1EB9E4F000945E84 /* Assets.xcassets */,
 				D7FC00901EB9E4F000945E84 /* LaunchScreen.storyboard */,
 				D7FC00931EB9E4F000945E84 /* Info.plist */,
+				D7BFF48F1EBB4728008F943C /* detailVC.swift */,
 			);
 			path = Jeju;
+			sourceTree = "<group>";
+		};
+		F5CC0BC522E2918AA9671DD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA8DD16678EA30B4E21E74BE /* Pods-Jeju.debug.xcconfig */,
+				284A2ADAB1978F7AB2DD84ED /* Pods-Jeju.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7FC00961EB9E4F000945E84 /* Build configuration list for PBXNativeTarget "Jeju" */;
 			buildPhases = (
+				A820277DAFDF105D78CB7EFB /* [CP] Check Pods Manifest.lock */,
 				D7FC00801EB9E4F000945E84 /* Sources */,
 				D7FC00811EB9E4F000945E84 /* Frameworks */,
 				D7FC00821EB9E4F000945E84 /* Resources */,
+				BF0D917B94BE99003F1F3D2A /* [CP] Embed Pods Frameworks */,
+				85FCC7A24CC98E2C50972F7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,11 +229,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85FCC7A24CC98E2C50972F7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jeju/Pods-Jeju-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A820277DAFDF105D78CB7EFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF0D917B94BE99003F1F3D2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jeju/Pods-Jeju-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7FC00801EB9E4F000945E84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BFF4901EBB4728008F943C /* detailVC.swift in Sources */,
 				D7FC008A1EB9E4F000945E84 /* ViewController.swift in Sources */,
 				D7FC00881EB9E4F000945E84 /* AppDelegate.swift in Sources */,
 			);
@@ -334,6 +405,7 @@
 		};
 		D7FC00971EB9E4F000945E84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8DD16678EA30B4E21E74BE /* Pods-Jeju.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -352,6 +424,7 @@
 		};
 		D7FC00981EB9E4F000945E84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 284A2ADAB1978F7AB2DD84ED /* Pods-Jeju.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

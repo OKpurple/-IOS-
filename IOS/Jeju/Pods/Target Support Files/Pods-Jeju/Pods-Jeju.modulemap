@@ -1,0 +1,6 @@
+framework module Pods_Jeju {
+  umbrella header "Pods-Jeju-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,131 @@
+//
+//  MainSearchVC.swift
+//  Jejumeet
+//
+//  Created by jwh on 2017. 5. 13..
+//  Copyright © 2017년 jwh. All rights reserved.
+//
+
+import UIKit
+import GooglePlaces
+
+class MainSearchVC: UIViewController {
+    
+    @IBOutlet var date: UIButton!
+    var datetext : String = "날짜"
+    var _date : String = "" {
+        willSet(val){
+            var arr = val.components(separatedBy: ":")
+            datetext = arr[0]+"-"+arr[1]+"-"+arr[2]+" "+arr[3]+":"+arr[4]
+        }
+    }
+    var _place : String = "장소"{
+        willSet(val){
+            print("장소 바뀜 \(val)")
+        }
+    }
+    var _coordinate : CLLocationCoordinate2D?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        searchButton.setTitle(_place, for: UIControlState.normal)
+        date.setTitle(datetext, for: UIControlState.normal)
+    }
+    
+    @IBAction func unwindToMainVC(_ segue: UIStoryboardSegue){
+        
+    }
+    
+    @IBOutlet var searchButton: UIButton!
+    
+       
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func searchBtn(_ sender: UIButton) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: true, completion: nil)
+
+    }
+
+    @IBAction func searchTodoList(_ sender: Any) {
+        self.performSegue(withIdentifier: "searchTodoList", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        NSLog("세그가 실행됩니다")
+        if segue.identifier == "searchTodoList"{
+        let dest = segue.destination as! UINavigationController
+        guard let tdlvc = dest.topViewController as? TodoListVC else{
+            return
+        }
+        
+//        NSLog("dest = \(segue.identifier)")
+//        
+//        
+//        guard let tdlvc = dest as? TodoListVC else{
+//            return
+//        }
+        
+        
+        print("세그 프레페어 부분\(_place)\(_coordinate)")
+        tdlvc._searchingPlaceName = _place
+        tdlvc._searchingPlaceCoordinate = _coordinate
+        
+        }
+    }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
+extension MainSearchVC: GMSAutocompleteViewControllerDelegate {
+    
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+      
+        
+        
+        
+        _coordinate = place.coordinate
+        _place = place.name
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
+}

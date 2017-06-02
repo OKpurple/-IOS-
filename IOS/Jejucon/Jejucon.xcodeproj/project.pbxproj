@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7238CFF1EC3F48000C16901 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7238CFE1EC3F48000C16901 /* ApiManager.swift */; };
+		D7CB327D1EC61B6700D94B8F /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB326F1EC61B6700D94B8F /* Floaty.swift */; };
+		D7CB327E1EC61B6700D94B8F /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32701EC61B6700D94B8F /* FloatyDelegate.swift */; };
+		D7CB327F1EC61B6700D94B8F /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32711EC61B6700D94B8F /* FloatyItem.swift */; };
+		D7CB32801EC61B6700D94B8F /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32721EC61B6700D94B8F /* FloatyManager.swift */; };
+		D7CB32811EC61B6700D94B8F /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32731EC61B6700D94B8F /* FloatyViewController.swift */; };
+		D7CB32821EC61B6700D94B8F /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32741EC61B6700D94B8F /* FloatyWindow.swift */; };
+		D7CB32831EC61B6700D94B8F /* Floaty.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = D7CB32761EC61B6700D94B8F /* Floaty.xcconfig */; };
+		D7CB32841EC61B6700D94B8F /* Floaty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32771EC61B6700D94B8F /* Floaty-dummy.m */; };
+		D7CB32851EC61B6700D94B8F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7CB327A1EC61B6700D94B8F /* Info.plist */; };
+		D7DFD7101EC22B16000B3DCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFD70F1EC22B16000B3DCD /* AppDelegate.swift */; };
+		D7DFD7121EC22B16000B3DCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFD7111EC22B16000B3DCD /* ViewController.swift */; };
+		D7DFD7151EC22B16000B3DCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DFD7131EC22B16000B3DCD /* Main.storyboard */; };
+		D7DFD7171EC22B16000B3DCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DFD7161EC22B16000B3DCD /* Assets.xcassets */; };
+		D7DFD71A1EC22B16000B3DCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DFD7181EC22B16000B3DCD /* LaunchScreen.storyboard */; };
+		D7DFD7241EC22C8C000B3DCD /* GoogleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DFD7231EC22C8C000B3DCD /* GoogleVC.swift */; };
+		D7DFD7261EC23450000B3DCD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DFD7251EC23450000B3DCD /* CoreLocation.framework */; };
+		D7E7D7FB1EC59CFE003CE32D /* detailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E7D7FA1EC59CFE003CE32D /* detailVC.swift */; };
+		D7E7D7FD1EC5A7D2003CE32D /* SelectListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E7D7FC1EC5A7D2003CE32D /* SelectListVC.swift */; };
+		D7E7D7FF1EC5A80A003CE32D /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E7D7FE1EC5A80A003CE32D /* SettingVC.swift */; };
+		D7E7D8011EC5AAF9003CE32D /* WriteTourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E7D8001EC5AAF9003CE32D /* WriteTourVC.swift */; };
+		D7E7D8031EC5B208003CE32D /* TodoListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E7D8021EC5B208003CE32D /* TodoListTVC.swift */; };
+		FA413C0214E83BE31E2F273D /* Pods_Jejucon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1744452E439E03A8119CEE7C /* Pods_Jejucon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1744452E439E03A8119CEE7C /* Pods_Jejucon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jejucon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8717127FF14285D0B5D911D /* Pods-Jejucon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jejucon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jejucon/Pods-Jejucon.debug.xcconfig"; sourceTree = "<group>"; };
+		D7238CFE1EC3F48000C16901 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		D7CB326F1EC61B6700D94B8F /* Floaty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Floaty.swift; path = Sources/Floaty.swift; sourceTree = "<group>"; };
+		D7CB32701EC61B6700D94B8F /* FloatyDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatyDelegate.swift; path = Sources/FloatyDelegate.swift; sourceTree = "<group>"; };
+		D7CB32711EC61B6700D94B8F /* FloatyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatyItem.swift; path = Sources/FloatyItem.swift; sourceTree = "<group>"; };
+		D7CB32721EC61B6700D94B8F /* FloatyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatyManager.swift; path = Sources/FloatyManager.swift; sourceTree = "<group>"; };
+		D7CB32731EC61B6700D94B8F /* FloatyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatyViewController.swift; path = Sources/FloatyViewController.swift; sourceTree = "<group>"; };
+		D7CB32741EC61B6700D94B8F /* FloatyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatyWindow.swift; path = Sources/FloatyWindow.swift; sourceTree = "<group>"; };
+		D7CB32751EC61B6700D94B8F /* Floaty.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Floaty.modulemap; sourceTree = "<group>"; };
+		D7CB32761EC61B6700D94B8F /* Floaty.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Floaty.xcconfig; sourceTree = "<group>"; };
+		D7CB32771EC61B6700D94B8F /* Floaty-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Floaty-dummy.m"; sourceTree = "<group>"; };
+		D7CB32781EC61B6700D94B8F /* Floaty-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Floaty-prefix.pch"; sourceTree = "<group>"; };
+		D7CB32791EC61B6700D94B8F /* Floaty-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Floaty-umbrella.h"; sourceTree = "<group>"; };
+		D7CB327A1EC61B6700D94B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D7DFD70C1EC22B16000B3DCD /* Jejucon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jejucon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DFD70F1EC22B16000B3DCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7DFD7111EC22B16000B3DCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7DFD7141EC22B16000B3DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7DFD7161EC22B16000B3DCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7DFD7191EC22B16000B3DCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7DFD71B1EC22B16000B3DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DFD7231EC22C8C000B3DCD /* GoogleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleVC.swift; sourceTree = "<group>"; };
+		D7DFD7251EC23450000B3DCD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D7E7D7FA1EC59CFE003CE32D /* detailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailVC.swift; sourceTree = "<group>"; };
+		D7E7D7FC1EC5A7D2003CE32D /* SelectListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectListVC.swift; sourceTree = "<group>"; };
+		D7E7D7FE1EC5A80A003CE32D /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		D7E7D8001EC5AAF9003CE32D /* WriteTourVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteTourVC.swift; sourceTree = "<group>"; };
+		D7E7D8021EC5B208003CE32D /* TodoListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListTVC.swift; sourceTree = "<group>"; };
+		F3BB0971DED6A850C50A9C8C /* Pods-Jejucon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jejucon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jejucon/Pods-Jejucon.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7DFD7091EC22B16000B3DCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DFD7261EC23450000B3DCD /* CoreLocation.framework in Frameworks */,
+				FA413C0214E83BE31E2F273D /* Pods_Jejucon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11A0760D58E2F7EDE7CE2A66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFD7251EC23450000B3DCD /* CoreLocation.framework */,
+				1744452E439E03A8119CEE7C /* Pods_Jejucon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7238CFD1EC3F46900C16901 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				D7238CFE1EC3F48000C16901 /* ApiManager.swift */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		D7CB327B1EC61B6700D94B8F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB32751EC61B6700D94B8F /* Floaty.modulemap */,
+				D7CB32761EC61B6700D94B8F /* Floaty.xcconfig */,
+				D7CB32771EC61B6700D94B8F /* Floaty-dummy.m */,
+				D7CB32781EC61B6700D94B8F /* Floaty-prefix.pch */,
+				D7CB32791EC61B6700D94B8F /* Floaty-umbrella.h */,
+				D7CB327A1EC61B6700D94B8F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Floaty";
+			sourceTree = "<group>";
+		};
+		D7CB327C1EC61B6700D94B8F /* Floaty */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB326F1EC61B6700D94B8F /* Floaty.swift */,
+				D7CB32701EC61B6700D94B8F /* FloatyDelegate.swift */,
+				D7CB32711EC61B6700D94B8F /* FloatyItem.swift */,
+				D7CB32721EC61B6700D94B8F /* FloatyManager.swift */,
+				D7CB32731EC61B6700D94B8F /* FloatyViewController.swift */,
+				D7CB32741EC61B6700D94B8F /* FloatyWindow.swift */,
+				D7CB327B1EC61B6700D94B8F /* Support Files */,
+			);
+			name = Floaty;
+			path = ../Pods/Floaty;
+			sourceTree = "<group>";
+		};
+		D7DFD7031EC22B16000B3DCD = {
+			isa = PBXGroup;
+			children = (
+				D7DFD70E1EC22B16000B3DCD /* Jejucon */,
+				D7DFD70D1EC22B16000B3DCD /* Products */,
+				DC0D942FB8681161F6680240 /* Pods */,
+				11A0760D58E2F7EDE7CE2A66 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D7DFD70D1EC22B16000B3DCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFD70C1EC22B16000B3DCD /* Jejucon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7DFD70E1EC22B16000B3DCD /* Jejucon */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB327C1EC61B6700D94B8F /* Floaty */,
+				D7238CFD1EC3F46900C16901 /* api */,
+				D7DFD70F1EC22B16000B3DCD /* AppDelegate.swift */,
+				D7DFD7111EC22B16000B3DCD /* ViewController.swift */,
+				D7DFD7131EC22B16000B3DCD /* Main.storyboard */,
+				D7DFD7161EC22B16000B3DCD /* Assets.xcassets */,
+				D7DFD7181EC22B16000B3DCD /* LaunchScreen.storyboard */,
+				D7DFD71B1EC22B16000B3DCD /* Info.plist */,
+				D7DFD7231EC22C8C000B3DCD /* GoogleVC.swift */,
+				D7E7D7FA1EC59CFE003CE32D /* detailVC.swift */,
+				D7E7D7FC1EC5A7D2003CE32D /* SelectListVC.swift */,
+				D7E7D7FE1EC5A80A003CE32D /* SettingVC.swift */,
+				D7E7D8001EC5AAF9003CE32D /* WriteTourVC.swift */,
+				D7E7D8021EC5B208003CE32D /* TodoListTVC.swift */,
+			);
+			path = Jejucon;
+			sourceTree = "<group>";
+		};
+		DC0D942FB8681161F6680240 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8717127FF14285D0B5D911D /* Pods-Jejucon.debug.xcconfig */,
+				F3BB0971DED6A850C50A9C8C /* Pods-Jejucon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7DFD70B1EC22B16000B3DCD /* Jejucon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7DFD71E1EC22B16000B3DCD /* Build configuration list for PBXNativeTarget "Jejucon" */;
+			buildPhases = (
+				2992BCF24341BDB203645427 /* [CP] Check Pods Manifest.lock */,
+				D7DFD7081EC22B16000B3DCD /* Sources */,
+				D7DFD7091EC22B16000B3DCD /* Frameworks */,
+				D7DFD70A1EC22B16000B3DCD /* Resources */,
+				72F4BD3B3FC5CDE0BC6D03AE /* [CP] Embed Pods Frameworks */,
+				C6C3AA591384220D540D7B0C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jejucon;
+			productName = Jejucon;
+			productReference = D7DFD70C1EC22B16000B3DCD /* Jejucon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7DFD7041EC22B16000B3DCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = jwh;
+				TargetAttributes = {
+					D7DFD70B1EC22B16000B3DCD = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D7DFD7071EC22B16000B3DCD /* Build configuration list for PBXProject "Jejucon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7DFD7031EC22B16000B3DCD;
+			productRefGroup = D7DFD70D1EC22B16000B3DCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7DFD70B1EC22B16000B3DCD /* Jejucon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7DFD70A1EC22B16000B3DCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DFD71A1EC22B16000B3DCD /* LaunchScreen.storyboard in Resources */,
+				D7CB32831EC61B6700D94B8F /* Floaty.xcconfig in Resources */,
+				D7DFD7171EC22B16000B3DCD /* Assets.xcassets in Resources */,
+				D7CB32851EC61B6700D94B8F /* Info.plist in Resources */,
+				D7DFD7151EC22B16000B3DCD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2992BCF24341BDB203645427 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72F4BD3B3FC5CDE0BC6D03AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jejucon/Pods-Jejucon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6C3AA591384220D540D7B0C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jejucon/Pods-Jejucon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7DFD7081EC22B16000B3DCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7CB32821EC61B6700D94B8F /* FloatyWindow.swift in Sources */,
+				D7CB32841EC61B6700D94B8F /* Floaty-dummy.m in Sources */,
+				D7238CFF1EC3F48000C16901 /* ApiManager.swift in Sources */,
+				D7E7D7FF1EC5A80A003CE32D /* SettingVC.swift in Sources */,
+				D7E7D8011EC5AAF9003CE32D /* WriteTourVC.swift in Sources */,
+				D7DFD7121EC22B16000B3DCD /* ViewController.swift in Sources */,
+				D7CB327E1EC61B6700D94B8F /* FloatyDelegate.swift in Sources */,
+				D7CB327F1EC61B6700D94B8F /* FloatyItem.swift in Sources */,
+				D7DFD7101EC22B16000B3DCD /* AppDelegate.swift in Sources */,
+				D7DFD7241EC22C8C000B3DCD /* GoogleVC.swift in Sources */,
+				D7CB327D1EC61B6700D94B8F /* Floaty.swift in Sources */,
+				D7E7D7FD1EC5A7D2003CE32D /* SelectListVC.swift in Sources */,
+				D7E7D7FB1EC59CFE003CE32D /* detailVC.swift in Sources */,
+				D7CB32801EC61B6700D94B8F /* FloatyManager.swift in Sources */,
+				D7E7D8031EC5B208003CE32D /* TodoListTVC.swift in Sources */,
+				D7CB32811EC61B6700D94B8F /* FloatyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D7DFD7131EC22B16000B3DCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7DFD7141EC22B16000B3DCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7DFD7181EC22B16000B3DCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7DFD7191EC22B16000B3DCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7DFD71C1EC22B16000B3DCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7DFD71D1EC22B16000B3DCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7DFD71F1EC22B16000B3DCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8717127FF14285D0B5D911D /* Pods-Jejucon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jejucon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = l.Jejucon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D7DFD7201EC22B16000B3DCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3BB0971DED6A850C50A9C8C /* Pods-Jejucon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jejucon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = l.Jejucon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7DFD7071EC22B16000B3DCD /* Build configuration list for PBXProject "Jejucon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DFD71C1EC22B16000B3DCD /* Debug */,
+				D7DFD71D1EC22B16000B3DCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7DFD71E1EC22B16000B3DCD /* Build configuration list for PBXNativeTarget "Jejucon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DFD71F1EC22B16000B3DCD /* Debug */,
+				D7DFD7201EC22B16000B3DCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7DFD7041EC22B16000B3DCD /* Project object */;
+}
