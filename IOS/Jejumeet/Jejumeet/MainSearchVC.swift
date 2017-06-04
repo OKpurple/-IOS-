@@ -22,7 +22,7 @@ class MainSearchVC: UIViewController {
     
     
     let apim = APIM()
-    @IBOutlet var date: UIButton!
+    
     var datetext : String = "날짜"
     var _date : String = "" {
         willSet(val){
@@ -40,7 +40,7 @@ class MainSearchVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         searchButton.setTitle(_place, for: UIControlState.normal)
-        date.setTitle(datetext, for: UIControlState.normal)
+        //date.setTitle(datetext, for: UIControlState.normal)
     }
     
     @IBAction func unwindToMainVC(_ segue: UIStoryboardSegue){

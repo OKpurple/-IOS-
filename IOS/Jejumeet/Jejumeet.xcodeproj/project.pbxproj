@@ -29,6 +29,7 @@
 		D769BA5A1ECAEA0800F0DB9E /* WriteTodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769BA591ECAEA0800F0DB9E /* WriteTodoVC.swift */; };
 		D7B133951EE296E30048500F /* BuiltIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B133941EE296E30048500F /* BuiltIn.swift */; };
 		D7B133971EE2B8780048500F /* TodoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B133961EE2B8770048500F /* TodoListCell.swift */; };
+		D7B1339A1EE40D5B0048500F /* WriteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B133991EE40D5B0048500F /* WriteDetail.swift */; };
 		D7D787301EDEF2AD0064E0EB /* RegistVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7872F1EDEF2AD0064E0EB /* RegistVC1.swift */; };
 		D7D787321EDF11FF0064E0EB /* APIM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D787311EDF11FF0064E0EB /* APIM.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		D769BA591ECAEA0800F0DB9E /* WriteTodoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteTodoVC.swift; sourceTree = "<group>"; };
 		D7B133941EE296E30048500F /* BuiltIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuiltIn.swift; sourceTree = "<group>"; };
 		D7B133961EE2B8770048500F /* TodoListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListCell.swift; sourceTree = "<group>"; };
+		D7B133991EE40D5B0048500F /* WriteDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteDetail.swift; sourceTree = "<group>"; };
 		D7D7872F1EDEF2AD0064E0EB /* RegistVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistVC1.swift; sourceTree = "<group>"; };
 		D7D787311EDF11FF0064E0EB /* APIM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,7 +124,7 @@
 				D756268B1EC709C600672686 /* Login */,
 				D75626961EC71EAB00672686 /* Search */,
 				D75626B61EC878AF00672686 /* Setting */,
-				D769BA591ECAEA0800F0DB9E /* WriteTodoVC.swift */,
+				D7B133981EE40D290048500F /* New Group */,
 				D7D787311EDF11FF0064E0EB /* APIM.swift */,
 			);
 			path = Jejumeet;
@@ -154,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				D75626941EC71E9E00672686 /* MainSearchVC.swift */,
-				D756269D1EC8380E00672686 /* SelectDateVC.swift */,
 				D756269F1EC8414A00672686 /* TodoListVC.swift */,
 				D75626A11EC85B3000672686 /* GoogleMapVC.swift */,
 				D75626A31EC85DE400672686 /* TodoListWithMapVC.swift */,
@@ -180,6 +181,16 @@
 				D75626B21EC874EC00672686 /* SettingTVC.swift */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		D7B133981EE40D290048500F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				D756269D1EC8380E00672686 /* SelectDateVC.swift */,
+				D769BA591ECAEA0800F0DB9E /* WriteTodoVC.swift */,
+				D7B133991EE40D5B0048500F /* WriteDetail.swift */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +330,7 @@
 				D75626911EC717D700672686 /* RegistVC.swift in Sources */,
 				D75626771EC707D100672686 /* AppDelegate.swift in Sources */,
 				D75626B31EC874EC00672686 /* SettingTVC.swift in Sources */,
+				D7B1339A1EE40D5B0048500F /* WriteDetail.swift in Sources */,
 				D7D787301EDEF2AD0064E0EB /* RegistVC1.swift in Sources */,
 				D75626A01EC8414A00672686 /* TodoListVC.swift in Sources */,
 				D75626A41EC85DE400672686 /* TodoListWithMapVC.swift in Sources */,

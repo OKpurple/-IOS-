@@ -41,6 +41,25 @@ class APIM{
         }
     }
     
+    func reqWriteContent(meta: @escaping(Int)->Void){
+        print("url:\(url), method:\(method), parameters:\(parameters),encode:\(encode)")
+        
+        Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
+            switch(response.result){
+            case .success(_):
+                if let json = response.result.value{
+                    let resp = JSON(json)
+                    print(resp)
+                    meta(resp["success"].intValue)
+                }
+                break
+            case .failure(_):
+                print("fail")
+                break
+            }
+        }
+    }
+    
     func reqLogin(meta: @escaping(Int)->Void){
         print("url:\(url), method:\(method), parameters:\(parameters),encode:\(encode)")
             
@@ -50,6 +69,10 @@ class APIM{
                 if let json = response.result.value{
                     let resp = JSON(json)
                     print(resp)
+                    var user_index = resp["data"][0]["user_index"].intValue
+                    print(user_index)
+                    let ud = UserDefaults.standard
+                    ud.set(user_index,forKey:"user_index")
                     meta(resp["success"].intValue)
                 }
                 break

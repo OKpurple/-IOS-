@@ -37,13 +37,14 @@ class SelectDateVC: UIViewController {
         let time = dateFormatter.string(from: _DatePicker.date)
         print("시간은 \(time)")
         
+        
         let dest = segue.destination
         print(dest)
-        guard let rvc = dest as? MainSearchVC else{
+        guard let rvc = dest as? WriteDetail else{
             return
         }
-        rvc._date = time
         
+        rvc._date = time
     }
 
   

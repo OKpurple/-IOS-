@@ -41,7 +41,18 @@ class SettingTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NSLog("선택행은 \(indexPath.row)")
         if(indexPath.row == 1){
-            self.presentingViewController?.dismiss(animated: true)
+            let alert = UIAlertController(title: "로그아웃 하실래요?", message: "", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "로그아웃", style: .default){
+                (_) in
+                let ud = UserDefaults.standard
+                ud.removeObject(forKey: "user_index")
+                self.presentingViewController?.dismiss(animated: true)
+            }
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            self.present(alert, animated: true)
+          
         }
     }
 

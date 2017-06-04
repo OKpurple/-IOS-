@@ -20,7 +20,7 @@ class WriteTodoVC: UIViewController,GMSMapViewDelegate  {
     var resultsViewController: GMSAutocompleteResultsViewController?
     var searchController: UISearchController?
     var resultView: UITextView?
-    
+    var currentCoordi : CLLocationCoordinate2D?
     
     
     override func viewDidLoad() {
@@ -45,23 +45,13 @@ class WriteTodoVC: UIViewController,GMSMapViewDelegate  {
         
         
             mapviewload()
-//        camera = GMSCameraPosition.camera(withLatitude: 33.500696, longitude: 126.529484
-//            , zoom: 10.0)
-//        let mapView = GMSMapView.map(withFrame: CGRect(x:0,y:250,width:376,height:300), camera: camera!)
-//        mapView.isMyLocationEnabled = true
-//        mapView.isMyLocationEnabled = true
-//        mapView.settings.zoomGestures = true
-//        mapView.settings.compassButton = true
-//        mapView.settings.myLocationButton = true
-//        mapView.delegate = self
-//        self.view.addSubview(mapView)
- 
+
     }
    
     
     func mapviewload(){
        
-        let mapView = GMSMapView.map(withFrame: CGRect(x:0,y:250,width:376,height:300), camera: camera!)
+        let mapView = GMSMapView.map(withFrame: CGRect(x:0,y:250,width:376,height:300), camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.isMyLocationEnabled = true
         mapView.settings.zoomGestures = true
@@ -77,16 +67,38 @@ class WriteTodoVC: UIViewController,GMSMapViewDelegate  {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        print(coordinate)
+        let position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        let marker = GMSMarker(position: position)
+        marker.title = "나의 일정"
+        marker.map = mapView
+        currentCoordi = coordinate
+        
+        let alert = UIAlertController(title: "일정을 공유하시겠어요?", message: "", preferredStyle: .alert)
+        let ok = UIAlertAction(title:"확인",style:.default){
+            (_) in
+            mapView.clear()
+            self.performSegue(withIdentifier: "writeDetailSegue", sender: self)
+            print(coordinate)
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel){(_) in
+            mapView.clear()
+            print("취소")
+        }
+        self.present(alert,animated: false)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+   
+        
     }
-    */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier=="writeDetailSegue"){
+            let rvc = segue.destination as! WriteDetail
+            rvc.loca = currentCoordi
+        }
+    }
 }
 
 
@@ -98,8 +110,8 @@ extension WriteTodoVC: GMSAutocompleteResultsViewControllerDelegate {
         print("Place name: \(place.name)")
         
         
-        self.camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 10.0)
-        dismiss(animated: true, completion: nil)
+        self.camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 13.0)
+        viewDidLoad()
     }
     
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
