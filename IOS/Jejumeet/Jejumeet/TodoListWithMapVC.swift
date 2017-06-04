@@ -32,7 +32,7 @@ class TodoListWithMapVC: UIViewController,GMSMapViewDelegate {
 //        footerLabel.text = ""
         // Do any additional setup after loading the view.
         let camera = GMSCameraPosition.camera(withLatitude: (_location?.latitude)!, longitude: (_location?.longitude)!, zoom: 13.0)
-        let mapView = GMSMapView.map(withFrame: CGRect(x:0,y:64,width:375,height:410), camera: camera)
+        let mapView = GMSMapView.map(withFrame: CGRect(x:0,y:64,width:375,height:667), camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.isMyLocationEnabled = true
         mapView.settings.zoomGestures = true

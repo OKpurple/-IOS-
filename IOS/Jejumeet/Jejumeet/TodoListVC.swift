@@ -86,10 +86,11 @@ class TodoListVC: UITableViewController,FloatyDelegate{
            tlwmvc?.todoList = self.bulletList
            tlwmvc?._location = _searchingPlaceCoordinate
         }
-//        if segue.identifier == "detailTodo1"{
-//            let tlwmvc = dest as? DetailTodoVC
-//            tlwmvc?.todo = bulletList[currentidx!]
-//        }
+        if segue.identifier == "detailTodoSegueg"{
+            let dest = segue.destination
+            let tlwmvc = dest as? DetailTodoVC
+            tlwmvc?.todo = bulletList[currentidx!]
+        }
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,11 +106,11 @@ class TodoListVC: UITableViewController,FloatyDelegate{
         
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        currentidx = indexPath.row
-//        performSegue(withIdentifier: "detailTodo1", sender: self)
-//        
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentidx = indexPath.row
+        performSegue(withIdentifier: "detailTodoSegueg", sender: self)
+        
+    }
     
 }
 

@@ -31,29 +31,12 @@ class GoogleMapVC: UIViewController , GMSMapViewDelegate{
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        marker.position = searchLocation!
+        marker.title = "목적지"
+        
         marker.map = mapView
         
-//        var locationManager:CLLocationManager!
-//        var mapView : GMSMapView?
-//        
-//        locationManager = CLLocationManager()
-//        // locationManager.delegate = self
-//        locationManager.requestWhenInUseAuthorization() //권한 요청
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//        locationManager.startUpdatingLocation()
-//        
-//        
-//        mapView = GMSMapView.map(withFrame: CGRect.zero, camera: GMSCameraPosition.camera(withLatitude: (locationManager.location?.coordinate.latitude)!, longitude: (locationManager.location?.coordinate.longitude)!, zoom: 6.0))
-//        mapView?.isMyLocationEnabled = true
-//        mapView?.isMyLocationEnabled = true
-//        mapView?.settings.myLocationButton = true;
-//        mapView?.settings.compassButton = true;
-        
-        
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
