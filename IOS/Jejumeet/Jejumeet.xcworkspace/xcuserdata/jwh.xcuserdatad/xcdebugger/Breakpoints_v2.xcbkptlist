@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Jejumeet/TodoListWithMapVC.swift"
-            timestampString = "516819636.235829"
+            timestampString = "518232862.95203"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Jejumeet/TodoListWithMapVC.swift"
-            timestampString = "516818128.590793"
+            timestampString = "518231472.949178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "footerdata"
             landmarkType = "24">
          </BreakpointContent>
@@ -156,6 +156,129 @@
                   startingLineNumber = "12"
                   endingLineNumber = "12"
                   offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Jejumeet/TodoListVC.swift"
+            timestampString = "518248034.948289"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Jejumeet/TodoListVC.swift"
+            timestampString = "518248034.948289"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Jejumeet/DetailTodoVC.swift"
+            timestampString = "518243892.93741"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Jejumeet.DetailTodoVC.__deallocating_deinit"
+                  moduleName = "Jejumeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jwh/workspace/JEJU_Contest/IOS/Jejumeet/Jejumeet/DetailTodoVC.swift"
+                  timestampString = "518243893.710909"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Jejumeet.DetailTodoVC.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Jejumeet.DetailTodoVC"
+                  moduleName = "Jejumeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jwh/workspace/JEJU_Contest/IOS/Jejumeet/Jejumeet/DetailTodoVC.swift"
+                  timestampString = "518243893.7129"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Jejumeet.DetailTodoVC.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Jejumeet.DetailTodoVC"
+                  moduleName = "Jejumeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jwh/workspace/JEJU_Contest/IOS/Jejumeet/Jejumeet/DetailTodoVC.swift"
+                  timestampString = "518243893.714881"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Jejumeet.DetailTodoVC.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Jejumeet.DetailTodoVC&gt;"
+                  moduleName = "Jejumeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jwh/workspace/JEJU_Contest/IOS/Jejumeet/Jejumeet/DetailTodoVC.swift"
+                  timestampString = "518243893.717129"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Jejumeet.DetailTodoVC.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Jejumeet.DetailTodoVC&gt;"
+                  moduleName = "Jejumeet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jwh/workspace/JEJU_Contest/IOS/Jejumeet/Jejumeet/DetailTodoVC.swift"
+                  timestampString = "518243893.720263"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
                </Location>
             </Locations>
          </BreakpointContent>

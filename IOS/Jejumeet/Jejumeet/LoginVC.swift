@@ -36,8 +36,7 @@ class LoginVC: UIViewController {
             apim.setApi(path: "/login", method: .post, parameters: ["user_id":login_id.text!,"user_password":login_pw.text!])
            
             apim.reqLogin{(success) in
-                print("executehere///////////////////////")
-                print(success)
+                print("status = \(success)")
                 if success == 1 {
                     self.performSegue(withIdentifier: "loginSegue", sender: self)
                 }else{

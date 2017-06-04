@@ -18,7 +18,6 @@ class SettingTVC: UITableViewController {
         profile_image.image = UIImage(named: "no_Image.png")
         profile_image.layer.borderWidth = 0
         profile_image.layer.masksToBounds = true
-        
         profile_image.layer.cornerRadius = profile_image.frame.height/2
         profile_image.clipsToBounds = true
         

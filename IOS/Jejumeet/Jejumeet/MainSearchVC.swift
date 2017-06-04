@@ -11,6 +11,17 @@ import GooglePlaces
 
 class MainSearchVC: UIViewController {
     
+    
+    var bulletList : [BuiltIn]! = []{
+        willSet(val){
+            print("들어옵니다 \(val)")
+            print(val.count)
+            print(bulletList.count)
+        }
+    }
+    
+    
+    let apim = APIM()
     @IBOutlet var date: UIButton!
     var datetext : String = "날짜"
     var _date : String = "" {
@@ -68,18 +79,12 @@ class MainSearchVC: UIViewController {
         guard let tdlvc = dest.topViewController as? TodoListVC else{
             return
         }
-        
-//        NSLog("dest = \(segue.identifier)")
-//        
-//        
-//        guard let tdlvc = dest as? TodoListVC else{
-//            return
-//        }
-        
-        
-        print("세그 프레페어 부분\(_place)\(_coordinate)")
+        print("H")
+        tdlvc.bulletList = self.bulletList
+        print("H")
         tdlvc._searchingPlaceName = _place
-        tdlvc._searchingPlaceCoordinate = _coordinate
+        print("H")
+            tdlvc._searchingPlaceCoordinate = _coordinate
         
         }
     }
@@ -99,12 +104,16 @@ extension MainSearchVC: GMSAutocompleteViewControllerDelegate {
     
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-      
-        
-        
-        
         _coordinate = place.coordinate
         _place = place.name
+        
+        
+        apim.setApi(path: "/searchSubBull/\(_coordinate!.longitude)&\(_coordinate!.latitude)", method: .get, parameters: [:])
+        apim.getTotoList{(builtIn) in
+            print("셋팅")
+            self.bulletList = builtIn
+            
+        }
         
         dismiss(animated: true, completion: nil)
     }
