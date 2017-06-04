@@ -30,6 +30,7 @@
 		D7B133951EE296E30048500F /* BuiltIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B133941EE296E30048500F /* BuiltIn.swift */; };
 		D7B133971EE2B8780048500F /* TodoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B133961EE2B8770048500F /* TodoListCell.swift */; };
 		D7B1339A1EE40D5B0048500F /* WriteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B133991EE40D5B0048500F /* WriteDetail.swift */; };
+		D7B1339C1EE434450048500F /* MyContentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1339B1EE434450048500F /* MyContentsVC.swift */; };
 		D7D787301EDEF2AD0064E0EB /* RegistVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7872F1EDEF2AD0064E0EB /* RegistVC1.swift */; };
 		D7D787321EDF11FF0064E0EB /* APIM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D787311EDF11FF0064E0EB /* APIM.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		D7B133941EE296E30048500F /* BuiltIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuiltIn.swift; sourceTree = "<group>"; };
 		D7B133961EE2B8770048500F /* TodoListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListCell.swift; sourceTree = "<group>"; };
 		D7B133991EE40D5B0048500F /* WriteDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteDetail.swift; sourceTree = "<group>"; };
+		D7B1339B1EE434450048500F /* MyContentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyContentsVC.swift; sourceTree = "<group>"; };
 		D7D7872F1EDEF2AD0064E0EB /* RegistVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistVC1.swift; sourceTree = "<group>"; };
 		D7D787311EDF11FF0064E0EB /* APIM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				D75626B21EC874EC00672686 /* SettingTVC.swift */,
+				D7B1339B1EE434450048500F /* MyContentsVC.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				D75626771EC707D100672686 /* AppDelegate.swift in Sources */,
 				D75626B31EC874EC00672686 /* SettingTVC.swift in Sources */,
 				D7B1339A1EE40D5B0048500F /* WriteDetail.swift in Sources */,
+				D7B1339C1EE434450048500F /* MyContentsVC.swift in Sources */,
 				D7D787301EDEF2AD0064E0EB /* RegistVC1.swift in Sources */,
 				D75626A01EC8414A00672686 /* TodoListVC.swift in Sources */,
 				D75626A41EC85DE400672686 /* TodoListWithMapVC.swift in Sources */,

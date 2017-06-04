@@ -70,9 +70,9 @@ class WriteDetail: UITableViewController, UITextViewDelegate {
     @IBAction func regist(_ sender: Any) {
         let ud = UserDefaults.standard
         let user_index = ud.integer(forKey: "user_index")
-        
+        print("user_index\(user_index)")
         apim.setApi(path:
-            "/addBull", method: .post, parameters: ["user_index":user_index,"bulletin_title":todo_title.text!,"bulletin_content":content.text!,"bulletin_meeting_date":_date,"bulletin_apply_limit":limitLabel.text!,"bulletin_latitude":loca!.latitude,"bulletin_longitude":loca!.longitude])
+            "/addBull", method: .post, parameters: ["user_index":user_index,"bulletin_title":todo_title.text!,"bulletin_content":content.text!,"bulletin_meeting_date":_date!,"bulletin_apply_limit":limitLabel.text!,"bulletin_latitude":loca!.latitude,"bulletin_longitude":loca!.longitude])
         
         apim.reqWriteContent{(success) in
             if success == 1{
