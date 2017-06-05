@@ -26,7 +26,137 @@ class APIM{
         //self.header = header
     }
     
+    
+    func agreeAp(meta: @escaping(Int)->Void){
+        print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
+        
+        Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
+            switch(response.result){
+            case .success(_):
+                if let json = response.result.value{
+                    let resp = JSON(json)
+                    print(resp)
+                   
+                    meta(resp["success"].intValue)
+                }
+                break
+            case .failure(_):
+                print("fail")
+                break
+            }
+        }
+    }
+    
+    
+    func disagreeAp(meta: @escaping(Int)->Void){
+        print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
+        
+        Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
+            switch(response.result){
+            case .success(_):
+                if let json = response.result.value{
+                    let resp = JSON(json)
+                    print(resp)
+                   
+                    meta(resp["success"].intValue)
+                }
+                break
+            case .failure(_):
+                print("fail")
+                break
+            }
+        }
+    }
+    
+    
+    
+    func addApply(meta: @escaping(Int)->Void){
+     print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
+    
+    Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
+    switch(response.result){
+    case .success(_):
+    if let json = response.result.value{
+    let resp = JSON(json)
+    print(resp)
+    let user_index = resp["data"][0]["user_index"].intValue
+    print(user_index)
+    let ud = UserDefaults.standard
+    ud.set(user_index,forKey:"user_index")
+    meta(resp["success"].intValue)
+    }
+    break
+    case .failure(_):
+    print("fail")
+    break
+    }
+    }
+    }
+    
+    
+    
+    
+    func getUserInfo(completion: @escaping(UserVO)->Void){
+        print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
+        
+        Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
+            switch(response.result){
+            case .success(_):
+                if let json = response.result.value{
+                    let resp = JSON(json)
+                    print(resp)
+                    
+                    var userInfo = UserVO(user_index: resp["data"][0]["user_index"].intValue, user_id: resp["data"][0]["user_id"].stringValue, user_name: resp["data"][0]["user_name"].stringValue, user_img: resp["data"][0]["user_img"].stringValue)
+                    
+                    
+                    completion(userInfo)
+                }
+                break
+            case .failure(_):
+                print("fail")
+                break
+            }
+            
+        }
+    }
+
+    
+    
+    func getSearchApply(completion: @escaping([applyVO])->Void){
+         print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
+        
+        Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
+            switch(response.result){
+            case .success(_):
+                if let json = response.result.value{
+                    let resp = JSON(json)
+                    print(resp)
+                    var myList = [applyVO]()
+                    for idx in 0..<resp["data"].count{
+                        let apply = applyVO(apply_index: resp["data"][idx]["apply_index"].intValue, bulletin_index: resp["data"][idx]["bulletin_index"].intValue, apply_message: resp["data"][idx]["apply_message"].stringValue, apply_date: resp["data"][idx]["apply_date"].stringValue, user_name: resp["data"][idx]["user_name"].stringValue, user_tel: resp["data"][idx]["user_tel"].stringValue, user_img: resp["data"][idx]["user_img"].stringValue, bulletin_title: resp["data"][idx]["bulletin_title"].stringValue, bulletin_img: resp["data"][idx]["bulletin_img"].stringValue,apply_status: resp["data"][idx]["apply_status"].intValue)
+                        
+                       
+                        
+                        
+                        myList += [apply]
+                    }
+                    
+                    completion(myList)
+                }
+                break
+            case .failure(_):
+                print("fail")
+                break
+            }
+            
+        }
+    }
+
+    
     func reqRegistUser(){
+        
+         print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
+        
         Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
             switch(response.result){
             case .success(_):
@@ -42,7 +172,7 @@ class APIM{
     }
     
     func reqWriteContent(meta: @escaping(Int)->Void){
-        print("url:\(url), method:\(method), parameters:\(parameters),encode:\(encode)")
+        print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
         
         Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
             switch(response.result){
@@ -60,7 +190,7 @@ class APIM{
         }
     }
     func reqMyTodo(completion: @escaping([BuiltIn])->Void){
-        print("url:\(url), method:\(method), parameters:\(parameters),encode:\(encode)")
+        print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
         
         Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
             switch(response.result){
@@ -89,7 +219,7 @@ class APIM{
     
     
     func reqLogin(meta: @escaping(Int)->Void){
-        print("url:\(url), method:\(method), parameters:\(parameters),encode:\(encode)")
+        print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
             
         Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
             switch(response.result){
@@ -112,7 +242,7 @@ class APIM{
     }
     
     func getTotoList(completion: @escaping([BuiltIn])->Void){
-        print("url:\(url), method:\(method), parameters:\(parameters),encode:\(encode)")
+         print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
         
         Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
             switch(response.result){

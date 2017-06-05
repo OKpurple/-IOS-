@@ -43,6 +43,13 @@ class RegistVC1: UIViewController {
         AgeStepper.wraps = true
         AgeStepper.autorepeat = true
         // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
+        
+    }
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

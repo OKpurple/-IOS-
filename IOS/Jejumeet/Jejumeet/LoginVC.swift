@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController ,UITextFieldDelegate ,UITextViewDelegate{
 
     let apim = APIM()
     
@@ -17,10 +17,31 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
+        
+      
     }
-
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        self.login_id.becomeFirstResponder()
+//    }
+//    
+    
+  
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,6 +59,14 @@ class LoginVC: UIViewController {
             apim.reqLogin{(success) in
                 print("status = \(success)")
                 if success == 1 {
+                    
+                    self.apim.setApi(path: "/searchMyUser/\(UserDefaults.standard.integer(forKey: "user_index"))", method: .get, parameters: [:])
+                    
+                    self.apim.getUserInfo{(userVO) in
+                         let ad = UIApplication.shared.delegate as? AppDelegate
+                         ad?.user = userVO
+                    }
+                    
                     self.performSegue(withIdentifier: "loginSegue", sender: self)
                 }else{
                     self.basicAlert(title: "오류!", message: "아이디, 비밀번호를 확인해주세요.", false)

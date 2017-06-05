@@ -13,17 +13,22 @@ class SettingTVC: UITableViewController {
     @IBOutlet weak var profile_image: UIImageView!
     @IBOutlet weak var profile_name: UILabel!
     
+    let apim = APIM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ad = UIApplication.shared.delegate as? AppDelegate
+        
         profile_image.image = UIImage(named: "no_Image.png")
         profile_image.layer.borderWidth = 0
         profile_image.layer.masksToBounds = true
         profile_image.layer.cornerRadius = profile_image.frame.height/2
         profile_image.clipsToBounds = true
+        profile_name.text = ad?.user.user_name!
         
         
-        profile_name.text = "정우희"
         
+        print("end")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,6 +36,15 @@ class SettingTVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    
+ //   func settingView(){
+//        apim.setApi(path: "/searchMyUser/\(UserDefaults.standard.integer(forKey: "user_index"))", method: .get, parameters: [:])
+//        
+//        apim.getUserInfo{(userVO) in
+//            self.profile_image.image = UIImage(named: userVO.user_img!)
+//            self.profile_name.text = userVO.user_name!
+//        }
+//    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,7 +54,9 @@ class SettingTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NSLog("선택행은 \(indexPath.row)")
-        if(indexPath.row == 1){
+        
+        
+        if(indexPath.row == 2){
             let alert = UIAlertController(title: "로그아웃 하실래요?", message: "", preferredStyle: .alert)
             let ok = UIAlertAction(title: "로그아웃", style: .default){
                 (_) in

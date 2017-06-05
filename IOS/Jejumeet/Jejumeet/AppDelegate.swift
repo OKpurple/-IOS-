@@ -15,11 +15,14 @@ import GoogleMaps
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let apim  = APIM()
+    var user = UserVO(user_index: 0, user_id: "", user_name: "", user_img: "no_Image.png")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyCxBmlS9AH5-LQHH-QYemuAMmTJjw7E60o")
         GMSPlacesClient.provideAPIKey("AIzaSyA-bS9q_6FKsOm51Hmto_aMJxzR5qszkuU")
+        
+
         // Override point for customization after application launch.
         return true
     }

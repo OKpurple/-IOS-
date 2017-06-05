@@ -10,10 +10,13 @@ import UIKit
 import GoogleMaps
 class DetailTodoVC: UITableViewController {
 
-    
+    let apim = APIM()
     
 
-    
+    @IBOutlet weak var isMy: UILabel!
+    @IBOutlet weak var callbtn: UIButton!
+    @IBOutlet weak var joinbtn: UIButton!
+    var user_index = UserDefaults.standard.integer(forKey: "user_index")
     
     var todo : BuiltIn?
     
@@ -29,6 +32,15 @@ class DetailTodoVC: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if(Int((todo?.user_index)!)==user_index){
+            isMy.isHidden = false
+            print ("내글이군")
+            self.joinbtn.isHidden = true
+            self.callbtn.isHidden = true
+        }
+        
         user_img.image = UIImage(named:"no_image.png")
         user_img.layer.borderWidth = 0
         user_img.layer.masksToBounds = true
@@ -56,6 +68,56 @@ class DetailTodoVC: UITableViewController {
         
     }
 
+    @IBAction func joinAction(_ sender: Any) {
+//        user_index = UserDefaults.standard.integer(forKey: "user_index")
+//        
+        
+        let alert = UIAlertController(title:"신청하기", message: "\(todo!.user_name!)님께 메시지를 전달하세요", preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        
+        let ok = UIAlertAction(title:"신청",style:.default){
+            (_) in
+            var msg : String?
+            if alert.textFields?[0].text != ""{
+                msg = alert.textFields?[0].text
+                
+                
+                self.apim.setApi(path: "/addApply", method: .post, parameters: ["user_index":UserDefaults.standard.integer(forKey: "user_index"), "bulletin_index":self.todo?.builtein_index!,"apply_message":msg!])
+                self.apim.addApply{(success) in
+                    if(success == 1 ){
+                        let alr = UIAlertController(title: "알림", message: "신청되었습니다.", preferredStyle: .alert)
+                        
+                        let ca = UIAlertAction(title: "확인", style: .cancel)
+                        alr.addAction(ca)
+                        self.present(alr, animated: true)
+                    }
+                }
+                
+                
+            }else{
+                let alr = UIAlertController(title: "알림", message: "메시지를 입력하세요", preferredStyle: .alert)
+                
+                let ca = UIAlertAction(title: "확인", style: .cancel)
+                alr.addAction(ca)
+                self.present(alr, animated: true)
+
+            }
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        alert.addTextField(configurationHandler: {(tf) in
+            tf.placeholder = "안녕하세요"
+        })
+        
+        self.present(alert, animated: true)
+        print("인덱스 \(todo!.builtein_index!)")
+       
+        
+      
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "containMap"{

@@ -31,6 +31,7 @@ class TodoListVC: UITableViewController,FloatyDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         searchingPlaceName.text = _searchingPlaceName
         layoutFAB()
         

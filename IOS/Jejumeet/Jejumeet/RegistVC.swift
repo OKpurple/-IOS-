@@ -63,6 +63,13 @@ class RegistVC: UIViewController {
         bar?.backgroundColor = UIColor(red: 32/255.0, green: 131/255.0, blue: 155/255.0, alpha: 1)
         bar?.tintColor = UIColor.white
         // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
+        
+    }
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
