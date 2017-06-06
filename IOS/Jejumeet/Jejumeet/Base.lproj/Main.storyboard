@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-588" y="-222"/>
+            <point key="canvasLocation" x="-1375" y="-224"/>
         </scene>
         <!--RegistVC-->
         <scene sceneID="HRc-oV-tlV">
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnA-Ai-1KO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1108" y="869.41529235382313"/>
+            <point key="canvasLocation" x="196" y="-1953"/>
         </scene>
         <!--Find Id PwVC-->
         <scene sceneID="pEL-kV-2SM">
@@ -257,13 +257,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kp-lC-Wsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2047" y="-202"/>
+            <point key="canvasLocation" x="-3025" y="-224"/>
         </scene>
         <!--My Toto ListTVC-->
         <scene sceneID="Chy-us-KhM">
             <objects>
                 <tableViewController id="xmU-oq-DZY" customClass="MyTotoListTVC" customModule="Jejumeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2pm-z5-vIw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" id="2pm-z5-vIw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -281,14 +281,52 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="73E-PA-RVW">
+                            <rect key="frame" x="0.0" y="224" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5pj-3D-ate">
-                                <rect key="frame" x="0.0" y="118" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTodoListC" rowHeight="106" id="5pj-3D-ate" customClass="MyTotoListC" customModule="Jejumeet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="118" width="375" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pj-3D-ate" id="x9J-Ka-GiQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="105.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="신청중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNN-9A-mfv">
+                                            <rect key="frame" x="292" y="28" width="63" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="우리 함께 하자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxj-Ye-UuW">
+                                            <rect key="frame" x="58" y="19" width="180" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5zB-yl-aZs">
+                                            <rect key="frame" x="10" y="19" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="정연성" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOO-Cs-0mY">
+                                            <rect key="frame" x="58" y="50" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="apply_status" destination="nNN-9A-mfv" id="nZX-3e-649"/>
+                                    <outlet property="bulletin_title" destination="Jxj-Ye-UuW" id="bv8-14-scT"/>
+                                    <outlet property="writer_img" destination="5zB-yl-aZs" id="VMx-lj-i0K"/>
+                                    <outlet property="writer_name" destination="XOO-Cs-0mY" id="ROU-Yh-M8e"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -297,10 +335,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="G68-fN-M9J"/>
+                    <connections>
+                        <outlet property="tableView" destination="2pm-z5-vIw" id="ARQ-Ik-ow3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMh-d0-ssL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2590" y="2137"/>
+            <point key="canvasLocation" x="365.60000000000002" y="545.57721139430294"/>
         </scene>
         <!--Write TodoVC-->
         <scene sceneID="ohb-nE-sn0">
@@ -338,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y18-rQ-E49" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1389.5999999999999" y="1169.865067466267"/>
+            <point key="canvasLocation" x="367" y="-224"/>
         </scene>
         <!--Write Detail-->
         <scene sceneID="2In-kt-vvc">
@@ -513,7 +554,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvr-BX-saT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261.5999999999999" y="1169.865067466267"/>
+            <point key="canvasLocation" x="1321" y="-224"/>
         </scene>
         <!--Item-->
         <scene sceneID="bU0-a5-NtL">
@@ -645,7 +686,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1H4-Fk-wId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3890" y="2063"/>
+            <point key="canvasLocation" x="366" y="1947"/>
         </scene>
         <!--Tome ListVC-->
         <scene sceneID="hmH-VD-AOz">
@@ -670,6 +711,11 @@
                                     </connections>
                                 </button>
                             </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="DHQ-aE-9Yv">
+                            <rect key="frame" x="0.0" y="181" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
@@ -763,7 +809,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVk-Gc-xRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5189.6000000000004" y="3067.0164917541233"/>
+            <point key="canvasLocation" x="1321" y="2083"/>
         </scene>
         <!--Main SearchVC-->
         <scene sceneID="4bV-EP-D4B">
@@ -824,7 +870,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2S3-U4-vmW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="-224"/>
+            <point key="canvasLocation" x="196" y="-1001"/>
         </scene>
         <!--Todo ListVC-->
         <scene sceneID="r69-uX-C4b">
@@ -848,8 +894,8 @@
                             </subviews>
                             <color key="backgroundColor" red="0.1238149573" green="0.51361184250000003" blue="0.60911363360000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="sxo-jd-bwO">
-                            <rect key="frame" x="0.0" y="175" width="375" height="32"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="I9i-gM-VtL">
+                            <rect key="frame" x="0.0" y="175" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -909,7 +955,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPR-hA-43m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3455" y="-288"/>
+            <point key="canvasLocation" x="1924" y="-1003"/>
         </scene>
         <!--Todo List With MapVC-->
         <scene sceneID="Wqg-BK-I1v">
@@ -931,7 +977,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5F6-vL-bZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4167" y="-1099"/>
+            <point key="canvasLocation" x="2895" y="-1516"/>
         </scene>
         <!--Detail TodoVC-->
         <scene sceneID="v8L-Se-Xkk">
@@ -1151,7 +1197,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZB-iV-Kk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4760.8000000000002" y="-73.763118440779621"/>
+            <point key="canvasLocation" x="3810" y="-1153"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zFq-JA-oQg">
@@ -1171,7 +1217,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zoh-pu-NDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="-224"/>
+            <point key="canvasLocation" x="-588" y="-224"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LAh-zE-eoc">
@@ -1189,7 +1235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hh-T8-65n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="-742"/>
+            <point key="canvasLocation" x="-588" y="-1133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RA7-3n-Rhe">
@@ -1207,7 +1253,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Da-Zv-XeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2460" y="-224"/>
+            <point key="canvasLocation" x="961" y="-1002"/>
         </scene>
         <!--RegistVC1-->
         <scene sceneID="q5A-3d-G2S">
@@ -1317,7 +1363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wh7-7v-w2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-370" y="869"/>
+            <point key="canvasLocation" x="961" y="-1953"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QRl-KQ-uLD">
@@ -1339,7 +1385,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyg-Ys-7mB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2047.2" y="869.41529235382313"/>
+            <point key="canvasLocation" x="-588" y="-1953"/>
         </scene>
         <!--Google MapVC-->
         <scene sceneID="baD-Dm-XLy">
@@ -1357,7 +1403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rLf-0Y-val" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4994" y="593"/>
+            <point key="canvasLocation" x="3809" y="-1815"/>
         </scene>
         <!--Select DateVC-->
         <scene sceneID="OgF-vi-uir">
@@ -1417,7 +1463,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Od3-jg-SeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cpE-mP-6Gr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3029.5999999999999" y="1342.5787106446778"/>
+            <point key="canvasLocation" x="2356" y="-224"/>
         </scene>
         <!--My ContentsVC-->
         <scene sceneID="rfe-4N-G5u">
@@ -1427,6 +1473,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="hRH-gq-2kK">
+                            <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoListCell1" rowHeight="60" id="5K4-TR-sxf" customClass="TodoListCell" customModule="Jejumeet" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
@@ -1481,7 +1532,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uQV-eB-dkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6192.8000000000002" y="2147.6761619190406"/>
+            <point key="canvasLocation" x="2356" y="1279"/>
         </scene>
         <!--Detail TodoVC-->
         <scene sceneID="CzN-nQ-eON">
@@ -1698,7 +1749,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBZ-RL-CEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7280.8000000000002" y="2146.3268365817094"/>
+            <point key="canvasLocation" x="3514" y="1193"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4sv-bd-yTD">
@@ -1717,7 +1768,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4i-NE-RlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4911" y="1759"/>
+            <point key="canvasLocation" x="1321" y="1279"/>
         </scene>
         <!--Google MapVC-->
         <scene sceneID="MzB-vz-Myq">
@@ -1735,7 +1786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osd-KT-OFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7418" y="2934"/>
+            <point key="canvasLocation" x="3514" y="592"/>
         </scene>
     </scenes>
     <resources>
@@ -1743,6 +1794,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3ho-aA-MCQ"/>
-        <segue reference="kFD-tk-VO9"/>
+        <segue reference="W0C-Ky-nPc"/>
     </inferredMetricsTieBreakers>
 </document>

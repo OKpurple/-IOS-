@@ -35,6 +35,9 @@
 		D7B133A01EE4F3A90048500F /* TomeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B1339F1EE4F3A90048500F /* TomeListVC.swift */; };
 		D7C1CCBB1EE50BE9007D0B25 /* TomeListC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C1CCBA1EE50BE9007D0B25 /* TomeListC.swift */; };
 		D7C1CCBD1EE53C2A007D0B25 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C1CCBC1EE53C2A007D0B25 /* UserVO.swift */; };
+		D7C1CCC11EE59DA6007D0B25 /* MyTodoListC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C1CCC01EE59DA6007D0B25 /* MyTodoListC.swift */; };
+		D7C1CCC31EE59DF3007D0B25 /* Mylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C1CCC21EE59DF3007D0B25 /* Mylist.swift */; };
+		D7C1CCC51EE5B28E007D0B25 /* EditUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C1CCC41EE5B28E007D0B25 /* EditUserInfoViewController.swift */; };
 		D7D787301EDEF2AD0064E0EB /* RegistVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D7872F1EDEF2AD0064E0EB /* RegistVC1.swift */; };
 		D7D787321EDF11FF0064E0EB /* APIM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D787311EDF11FF0064E0EB /* APIM.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +75,9 @@
 		D7B1339F1EE4F3A90048500F /* TomeListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomeListVC.swift; sourceTree = "<group>"; };
 		D7C1CCBA1EE50BE9007D0B25 /* TomeListC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TomeListC.swift; sourceTree = "<group>"; };
 		D7C1CCBC1EE53C2A007D0B25 /* UserVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
+		D7C1CCC01EE59DA6007D0B25 /* MyTodoListC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTodoListC.swift; sourceTree = "<group>"; };
+		D7C1CCC21EE59DF3007D0B25 /* Mylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mylist.swift; sourceTree = "<group>"; };
+		D7C1CCC41EE5B28E007D0B25 /* EditUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserInfoViewController.swift; sourceTree = "<group>"; };
 		D7D7872F1EDEF2AD0064E0EB /* RegistVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistVC1.swift; sourceTree = "<group>"; };
 		D7D787311EDF11FF0064E0EB /* APIM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D756268C1EC70C7B00672686 /* GoogleService-Info.plist */,
-				D75626B01EC874DA00672686 /* MyTotoListTVC.swift */,
+				D7C1CCBF1EE59B64007D0B25 /* New Group1 */,
 				D75626A51EC866CC00672686 /* Resources */,
 				D75626881EC7099B00672686 /* Support Files */,
 				D756267A1EC707D100672686 /* Main.storyboard */,
@@ -194,6 +200,7 @@
 				D7B1339B1EE434450048500F /* MyContentsVC.swift */,
 				D7B1339F1EE4F3A90048500F /* TomeListVC.swift */,
 				D7C1CCBA1EE50BE9007D0B25 /* TomeListC.swift */,
+				D7C1CCC41EE5B28E007D0B25 /* EditUserInfoViewController.swift */,
 			);
 			name = Setting;
 			sourceTree = "<group>";
@@ -206,6 +213,16 @@
 				D7B133991EE40D5B0048500F /* WriteDetail.swift */,
 			);
 			name = "New Group";
+			sourceTree = "<group>";
+		};
+		D7C1CCBF1EE59B64007D0B25 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				D75626B01EC874DA00672686 /* MyTotoListTVC.swift */,
+				D7C1CCC01EE59DA6007D0B25 /* MyTodoListC.swift */,
+				D7C1CCC21EE59DF3007D0B25 /* Mylist.swift */,
+			);
+			name = "New Group1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +358,7 @@
 				D756268A1EC709BF00672686 /* LoginVC.swift in Sources */,
 				D769BA5A1ECAEA0800F0DB9E /* WriteTodoVC.swift in Sources */,
 				D7B133971EE2B8780048500F /* TodoListCell.swift in Sources */,
+				D7C1CCC31EE59DF3007D0B25 /* Mylist.swift in Sources */,
 				D75626931EC717EA00672686 /* FindIdPwVC.swift in Sources */,
 				D7B1339E1EE4F15C0048500F /* applyVO.swift in Sources */,
 				D75626911EC717D700672686 /* RegistVC.swift in Sources */,
@@ -350,6 +368,7 @@
 				D7B1339C1EE434450048500F /* MyContentsVC.swift in Sources */,
 				D7D787301EDEF2AD0064E0EB /* RegistVC1.swift in Sources */,
 				D7C1CCBD1EE53C2A007D0B25 /* UserVO.swift in Sources */,
+				D7C1CCC11EE59DA6007D0B25 /* MyTodoListC.swift in Sources */,
 				D75626A01EC8414A00672686 /* TodoListVC.swift in Sources */,
 				D7B133A01EE4F3A90048500F /* TomeListVC.swift in Sources */,
 				D7C1CCBB1EE50BE9007D0B25 /* TomeListC.swift in Sources */,
@@ -357,6 +376,7 @@
 				D756269E1EC8380E00672686 /* SelectDateVC.swift in Sources */,
 				D75626951EC71E9E00672686 /* MainSearchVC.swift in Sources */,
 				D7D787321EDF11FF0064E0EB /* APIM.swift in Sources */,
+				D7C1CCC51EE5B28E007D0B25 /* EditUserInfoViewController.swift in Sources */,
 				D75626AB1EC86C5000672686 /* DetailTodoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

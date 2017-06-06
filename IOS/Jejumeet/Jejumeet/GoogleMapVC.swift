@@ -47,8 +47,8 @@ class GoogleMapVC: UIViewController , GMSMapViewDelegate{
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
-        let parent = self.storyboard?.instantiateViewController(withIdentifier: "TDMmain") as? TodoListWithMapVC
-        parent?.footerdata = "NO!!!"
+//        let parent = self.storyboard?.instantiateViewController(withIdentifier: "TDMmain") as? TodoListWithMapVC
+//        parent?.footerdata = "NO!!!"
         
     }
 

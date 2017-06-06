@@ -57,6 +57,8 @@ class TomeListVC: UITableViewController {
             _statustext = "동행승인"
         }
         cell.apply_status.text = _statustext!
+        
+        
         cell.user_img.image = UIImage(named:"no_Image.png")
         
         cell.user_name.text = data.user_name
@@ -72,7 +74,8 @@ class TomeListVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let data = toMeList[indexPath.row]
-        
+       
+        if data.apply_status != 0 {
         let alert = UIAlertController(title: "동행", message: "함께 하시겠어요?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "수락", style: .default){
             (_) in
@@ -96,13 +99,14 @@ class TomeListVC: UITableViewController {
                 }
                 
             })
-          
+            
             
             
         }
         alert.addAction(ok)
         alert.addAction(cancel)
         self.present(alert, animated: true)
+        }
     }
 
     /*

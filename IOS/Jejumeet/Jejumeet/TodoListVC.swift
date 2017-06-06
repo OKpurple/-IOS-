@@ -13,9 +13,7 @@ class TodoListVC: UITableViewController,FloatyDelegate{
 
     var bulletList : [BuiltIn]! = []{
         willSet(val){
-            print("들어옵니다 \(val)")
-            print(val.count)
-            print(bulletList.count)
+            print("TodoListVC의 bulletList에 셋팅됨")
         }
     }
     var currentidx : Int?

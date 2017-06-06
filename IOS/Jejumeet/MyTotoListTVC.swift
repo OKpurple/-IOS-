@@ -8,88 +8,62 @@
 
 import UIKit
 
-class MyTotoListTVC: UITableViewController {
+class MyTotoListTVC: UITableViewController  {
 
+    let apim = APIM()
+    var mylist = [Mylist]()
+    var user_index = UserDefaults.standard.integer(forKey: "user_index")
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        print("MyTodoListTVC시작 useridx = \(user_index)")
+        viewInit()
+        
     }
-
+   
+    override func viewDidAppear(_ animated: Bool) {
+        print("MyTodoListTVC시작 useridx = \(user_index)")
+        viewInit()
+    }
+    func viewInit(){
+        
+        apim.setApi(path: "/searchApply/\(user_index)", method: .get, parameters: [:])
+        apim.getMyReqTodo{(list) in
+            self.mylist = list
+            self.tableView.reloadData()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mylist.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTodoListC", for: indexPath) as! MyTotoListC
+        let idx = indexPath.row
+        var status_text:String?
+        if(mylist[idx].apply_status!==1){
+            status_text = "신청중"
+        }else if(mylist[idx].apply_status!==0){
+            status_text = "동행승낙"
+        }
+        
+        cell.apply_status.text = status_text
+        cell.writer_img.image = UIImage(named:mylist[idx].writer_img!)
+        var profile_image = cell.writer_img!
+        profile_image.layer.borderWidth = 0
+        profile_image.layer.masksToBounds = true
+        profile_image.layer.cornerRadius = profile_image.frame.height/2
+        profile_image.clipsToBounds = true
+        
+        
+        cell.bulletin_title.text = mylist[idx].bulletin_title!
+        cell.writer_name.text = mylist[idx].writer_name!
+        return cell
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

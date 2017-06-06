@@ -68,29 +68,52 @@ class APIM{
         }
     }
     
-    
+    func getMyReqTodo(completion: @escaping([Mylist])->Void){
+        print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
+        
+        Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
+        switch(response.result){
+        case .success(_):
+        if let json = response.result.value{
+        let resp = JSON(json)
+        print(resp)
+            
+        var mylist = [Mylist]()
+        for idx in 0 ..< resp["data"].count{
+            var list = Mylist(user_index:resp["data"][idx]["user_index"].intValue , bulletin_index: resp["data"][idx]["bulletin_index"].intValue, bulletin_title: resp["data"][idx]["bulletin_title"].stringValue, apply_status: resp["data"][idx]["apply_status"].intValue, apply_message: resp["data"][idx]["apply_message"].stringValue, apply_date: resp["data"][idx]["apply_date"].stringValue,writer_img:resp["data"][idx]["user_img"].stringValue,writer_name:resp["data"][idx]["user_name"].stringValue)
+            mylist += [list]
+        }
+     
+        
+        completion(mylist)
+        }
+        break
+        case .failure(_):
+        print("fail")
+        break
+        }
+        
+        }
+    }
     
     func addApply(meta: @escaping(Int)->Void){
      print("url:\(url!), method:\(method!), parameters:\(parameters!),encode:\(encode)")
     
     Alamofire.request(url,method: method, parameters: parameters, encoding: encode).responseJSON { (response) in
-    switch(response.result){
-    case .success(_):
-    if let json = response.result.value{
-    let resp = JSON(json)
-    print(resp)
-    let user_index = resp["data"][0]["user_index"].intValue
-    print(user_index)
-    let ud = UserDefaults.standard
-    ud.set(user_index,forKey:"user_index")
-    meta(resp["success"].intValue)
-    }
-    break
-    case .failure(_):
-    print("fail")
-    break
-    }
-    }
+        switch(response.result){
+            case .success(_):
+                if let json = response.result.value{
+                    let resp = JSON(json)
+                    print(resp)
+                   
+                    meta(resp["success"].intValue)
+                }
+                break
+            case .failure(_):
+                print("fail")
+                break
+            }
+        }
     }
     
     
@@ -106,8 +129,7 @@ class APIM{
                     let resp = JSON(json)
                     print(resp)
                     
-                    var userInfo = UserVO(user_index: resp["data"][0]["user_index"].intValue, user_id: resp["data"][0]["user_id"].stringValue, user_name: resp["data"][0]["user_name"].stringValue, user_img: resp["data"][0]["user_img"].stringValue)
-                    
+                    var userInfo = UserVO(user_index: resp["data"][0]["user_index"].intValue, user_id: resp["data"][0]["user_id"].stringValue, user_name: resp["data"][0]["user_name"].stringValue, user_img: resp["data"][0]["user_img"].stringValue,user_sex: resp["data"][0]["user_sex"].stringValue, user_age: resp["data"][0]["user_age"].stringValue, user_tel: resp["data"][0]["user_tel"].stringValue, user_email: resp["data"][0]["user_email"].stringValue, user_password: resp["data"][0]["user_password"].stringValue)
                     
                     completion(userInfo)
                 }
